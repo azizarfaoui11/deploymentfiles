@@ -1,0 +1,7 @@
+git init 
+git add nom du fichier 
+git commit -m "" 
+git pull/push
+git diff 
+git merge 
+git reset 
