@@ -1,0 +1,29 @@
+kbalha tsob posgresql service 
+
+tasnaa base de donne 
+
+temchi l sonar /opt/  thot les parameter de sonnection username /password/ url  tabaa tuto chat .
+
+
+
+#!/bin/bash
+
+# Se déplacer dans le répertoire /opt
+cd /opt
+
+# Télécharger SonarQube
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.3.0.82913.zip
+
+# Installer unzip si ce n'est pas encore fait
+sudo apt install -y unzip
+
+# Extraire SonarQube
+sudo unzip sonarqube-10.3.0.82913.zip
+
+# Renommer le dossier extrait
+sudo mv sonarqube-10.3.0.82913 sonarqube
+
+# Changer les permissions pour l'utilisateur actuel
+sudo chown -R $USER:$USER /opt/sonarqube
+
+echo "✅ SonarQube a été téléchargé et installé dans /opt/sonarqube"
